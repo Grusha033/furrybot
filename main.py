@@ -2,6 +2,8 @@ import disnake
 from disnake.ext import commands 
 import random
 
+from getFurryImages import getFurryImage
+
 bot = commands.Bot(command_prefix = "112.", help_command = None, intents = disnake.Intents.all())
 
 destroyMessages = False
@@ -87,7 +89,15 @@ async def info(ctx) :
     infoEmbed.add_field(name="112.обізянка", value="хейт після сообщенія таргета", inline=False)
     infoEmbed.add_field(name="112.інфо", value="інфа по ботіку", inline=False)
     infoEmbed.add_field(name="112.мусор <колічество> <@нік (не обовязково)>", value="удаля задане колічество сообщеній", inline=False)
+    infoEmbed.add_field(name="112.фуряшка", value="отправля фуряшку в чатік", inline=False)
     await ctx.send(embed=infoEmbed)
+
+@bot.command(name="фуряшка")
+@commands.has_permissions(administrator=True)
+async def furryImg(ctx):
+    await ctx.message.delete()
+    url = getFurryImage()
+    await ctx.send(f"{url}")
 
 def randomAnswers() :
     answer = None
@@ -111,5 +121,4 @@ def getName(name) :
          getedName = name
     return getedName
         
-
 bot.run("MTE4MDE0MzkwNTYwMjI3NzQ4OA.GoDPwV.txiGJjTO36SgiyHcfqhUVi2kPoEik1HKnU0Jac")
