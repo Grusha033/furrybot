@@ -8,6 +8,7 @@ print(getFurryImage())
 
 
 
+
 bot = commands.Bot(command_prefix = "112.", help_command = None, intents = disnake.Intents.all())
 
 destroyMessages = False
