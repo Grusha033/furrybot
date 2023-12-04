@@ -34,6 +34,5 @@ def getFurryImage():
 
     randInt = randrange(9)
 
-
     # 😠 Я злой
     return json['items'][randInt]['link']

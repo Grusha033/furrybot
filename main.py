@@ -2,9 +2,9 @@ import disnake
 from disnake.ext import commands 
 import random
 
-from  getFurryImages import getFurryImage
+from getFurryImages import getFurryImage
 
-print(getFurryImage())
+# print(getFurryImage())
 
 
 
