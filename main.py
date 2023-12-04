@@ -121,4 +121,4 @@ def getName(name) :
          getedName = name
     return getedName
         
-bot.run("MTE4MDE0MzkwNTYwMjI3NzQ4OA.GoDPwV.txiGJjTO36SgiyHcfqhUVi2kPoEik1HKnU0Jac")
+bot.run("")
